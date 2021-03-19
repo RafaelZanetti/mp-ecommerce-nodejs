@@ -93,8 +93,8 @@ const details_order = [];
 app.get('/detail', (req, res) => {
     res.render('detail', req.query);
 
-    let json = req.query;
-    details_order = { json };
+    details_order.push(req.query);
+     
 
 });
 
