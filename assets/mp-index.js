@@ -19,7 +19,7 @@ for (var i = 0; i < numButtons; i++) {
 
         console.log('orderDATA-LOG: ', orderData);
         
-        fetch("/create_preference", {
+        /*fetch("/create_preference", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -39,11 +39,11 @@ for (var i = 0; i < numButtons; i++) {
             .catch(function() {
                 alert("Unexpected error");
                 $('.mercadopago-button').attr("disabled", false);
-            });
+            });*/
     });
 }
 
-  //Criar preferência ao clicar no botão checkout
+/*  //Criar preferência ao clicar no botão checkout
   function createCheckoutButton(preference) {
     var script = document.createElement("script");
     
@@ -90,4 +90,4 @@ for (var i = 0; i < numButtons; i++) {
         $(".shopping-cart").show(500).fadeIn();
     }, 500);
     $('#checkout-btn').attr("disabled", false);  
-  });
+  });*/
