@@ -88,20 +88,17 @@ app.get('/feedback', function(request, response) {
 });
 //*-----------------------------------//
 
+const details_order = [];
 
+app.get('/detail', (req, res) => {
+    res.render('detail', req.query);
 
+    let json = req.query;
+    details_order = { json };
 
-const consultando = () => {
-    app.get('/detail', function (req, res) {
-        res.render('detail', req.query);
-    
-        console.log(req.query);
-        return req.query;
-    });
-}
-consultando();
+});
 
-console.log('CONSULTANDO: ' + consultando.req.query);
+console.log(details_order);
 /**----------------------------------------- */
 //MP Integration
 
