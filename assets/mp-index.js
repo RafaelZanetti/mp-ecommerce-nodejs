@@ -12,9 +12,9 @@ for (var i = 0; i < numButtons; i++) {
         $('.mercadopago-button').attr("disabled", true);
 
         var orderData = {
-            quantity: parseInt(document.getElementsByName("unit").value),
-            description: document.getElementsByName("title").value,
-            price: document.getElementsByName("price").value
+            description: document.getElementsByClassName('details--title').innerHTML,
+            quantity: document.getElementsByClassName('details--unit').innerHTML,
+            price: document.getElementsByClassName('details--price').innerHTML
         };
 
         console.log('orderDATA-LOG: ', orderData);
