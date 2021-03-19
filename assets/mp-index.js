@@ -2,8 +2,8 @@
 var elMpButton = document.getElementsByClassName('mercadopago-button');
 var numButtons = elMpButton.length;
 
-console.log(elMpButton);
-console.log(numButtons);
+//console.log(elMpButton);
+console.log('numeroButtonPagamento: ', numButtons);
 
 for (var i = 0; i < numButtons; i++) {
     elMpButton[i].addEventListener('click', function() {
