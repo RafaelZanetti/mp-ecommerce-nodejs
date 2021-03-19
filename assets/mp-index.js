@@ -73,7 +73,7 @@ for (var i = 0; i < numButtons; i++) {
   
     
   }
-  document.querySelector("quantity").addEventListener("change", updatePrice);
+  document.getElementsByName("unit").addEventListener("change", updatePrice);
   updatePrice();  
   
   //voltar
