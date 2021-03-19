@@ -93,8 +93,13 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 
     console.log(req.query);
+    return req.query;
 });
 
+const consultando = (info) => {
+    console.log('TESTE: ' + info );
+}
+consultando();
 /**----------------------------------------- */
 //MP Integration
 
