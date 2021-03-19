@@ -1,6 +1,6 @@
 zz-informacoes-para-formulario-exame/
-.pdf
-.txt
+*.pdf
+*.txt
 
 # Logs
 logs
