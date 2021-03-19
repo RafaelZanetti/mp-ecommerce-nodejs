@@ -8,7 +8,7 @@ console.log(numButtons);
 for (var i = 0; i < numButtons; i++) {
     elMpButton[i].addEventListener('click', function() {
     
-        alert("entrou no click");
+        //alert("entrou no click");
         $('.mercadopago-button').attr("disabled", true);
 
         var orderData = {
@@ -16,6 +16,8 @@ for (var i = 0; i < numButtons; i++) {
             description: document.getElementsByName("title").value,
             price: document.getElementsByName("price").value
         };
+
+        console.log('orderDATA-LOG: ', orderData);
         
         fetch("/create_preference", {
                 method: "POST",
