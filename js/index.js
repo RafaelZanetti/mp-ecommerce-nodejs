@@ -1,5 +1,5 @@
 //Manipula a chamada para o back-end e gera preferência.
-document.querySelector(".mercadopago-button").addEventListener("click", function() {
+document.getElementsByClassName("mercadopago-button").addEventListener("click", function() {
 
     $('.mercadopago-button').attr("disabled", true);
 
