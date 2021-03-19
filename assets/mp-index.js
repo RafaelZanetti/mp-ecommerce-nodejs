@@ -11,7 +11,7 @@ for (var i = 0; i < numButtons; i++) {
         //alert("entrou no click");
         //$('.mercadopago-button').attr("disabled", true);
 
-        var elTitle = document.getElementsByClassName('details--title');
+        var elTitle = document.getElementById('details--title');
         console.log(elTitle.innerText);
 
         var orderData = {
