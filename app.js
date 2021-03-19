@@ -4,11 +4,15 @@ var port = process.env.PORT || 3000
 
 const mercadopago = require("mercadopago");
 
+mercadopago.configurations.setAccessToken("APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327"); 
+
 var app = express();
  
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(express.static('assets'));
  
 app.use('/assets', express.static(__dirname + '/assets'));

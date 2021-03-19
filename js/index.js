@@ -1,13 +1,3 @@
-const express = require('express');
-
-const app = express();
-
-app.get('/detail', function (req, res) {
-    res.render('detail', req.query);
-
-    console.log('index.js', req.query);
-});
-
 //Manipula a chamada para o back-end e gera preferência.
 document.querySelector(".mercadopago-button").addEventListener("click", function() {
 
