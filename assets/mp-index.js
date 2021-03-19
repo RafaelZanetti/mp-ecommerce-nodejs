@@ -12,7 +12,7 @@ for (var i = 0; i < numButtons; i++) {
         $('.mercadopago-button').attr("disabled", true);
 
         var orderData = {
-            quantity: document.getElementsByName("unit").value,
+            quantity: parseInt(document.getElementsByName("unit").value),
             description: document.getElementsByName("title").value,
             price: document.getElementsByName("price").value
         };
@@ -56,9 +56,10 @@ for (var i = 0; i < numButtons; i++) {
   
   //Lidar com atualização de preço
   function updatePrice() {
-    let quantity = parseInt(document.getElementsByName("unit").value);
+    let quantity = (document.getElementsByName("unit").value);
     let unitPrice = document.getElementsByName("price").value;
     //let amount = parseInt(unitPrice) * parseInt(quantity);
+
   
     let description = document.getElementsByName("title").value;
     
