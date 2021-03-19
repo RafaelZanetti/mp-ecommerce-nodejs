@@ -1,0 +1,65 @@
+ {
+    "collector_id": 725736327,
+    "operation_type": "regular_payment",
+    "items": [
+        {
+            "id": "1234",
+            "picture_url": "https://www.collinsdictionary.com/images/full/book_181404689_1000.jpg",
+            "title": "Some book",
+            "description": "Celular de Tienda e-commerce",
+            "category_id": "art",
+            "currency_id": "BRL",
+            "quantity": 1,
+            "unit_price": 10
+        }
+    ],
+    "payer": {
+        "name": "Lalo",
+        "surname": "Landa",
+        "email": "test_user_92801501@testuser.com",
+        "date_created": "",
+        "phone": {
+            "area_code": "55",
+            "number": "98529-8743"
+        },
+        "identification": {
+            "type": "CPF",
+            "number": "19191919100"
+        },
+        "address": {
+            "street_name": "Insurgentes Sur",
+            "street_number": 1602,
+            "zip_code": "78134-190"
+        }
+    },
+    "back_urls": {
+        "success": "http://localhost:8080/feedback",
+        "pending": "http://localhost:8080/feedback",
+        "failure": "http://localhost:8080/feedback"
+    },
+    "auto_return": "approved",
+    "payment_methods": {
+        "excluded_payment_methods": [
+            {
+                "id": "master"
+            }
+        ],
+        "excluded_payment_types": [
+            {
+                "id": "ticket"
+            }
+        ],
+        "installments": 12,
+    },
+    "notification_url": "https://webhook.site/31d8362e-f603-476d-ae87-30e1648e22b4",
+    "statement_descriptor": "MERCADOPAGO",
+    "external_reference": "rafa_zanetti_c@hotmail.com",
+    "additional_info": "",
+    "expires": false,
+    "expiration_date_from": null,
+    "expiration_date_to": null,
+    "date_created": "2021-03-18T11:30:23.535-04:00",
+    "id": "202809963-920c288b-4ebb-40be-966f-700250fa5370",
+    "init_point": "https://www.mercadopago.com/mla/checkout/start?pref_id=202809963-920c288b-4ebb-40be-966f-700250fa5370",
+    "sandbox_init_point": "https://sandbox.mercadopago.com/mla/checkout/pay?pref_id=202809963-920c288b-4ebb-40be-966f-700250fa5370"
+}
