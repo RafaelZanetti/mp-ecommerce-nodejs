@@ -56,7 +56,7 @@ for (var i = 0; i < numButtons; i++) {
   
   //Lidar com atualização de preço
   function updatePrice() {
-    let quantity = document.getElementsByName("unit").value;
+    let quantity = parseInt(document.getElementsByName("unit").value);
     let unitPrice = document.getElementsByName("price").value;
     //let amount = parseInt(unitPrice) * parseInt(quantity);
   
