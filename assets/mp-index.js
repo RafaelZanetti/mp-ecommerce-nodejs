@@ -9,7 +9,7 @@ for (var i = 0; i < numButtons; i++) {
     elMpButton[i].addEventListener('click', function() {
     
         //alert("entrou no click");
-        $('.mercadopago-button').attr("disabled", true);
+        //$('.mercadopago-button').attr("disabled", true);
 
         var orderData = {
             description: document.getElementsByClassName('details--title').innerHTML,
