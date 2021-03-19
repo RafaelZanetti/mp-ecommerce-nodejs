@@ -1,18 +1,22 @@
 //Manipula a chamada para o back-end e gera preferência.
-var elMpButton = document.getElementsByClassName("mercadopago-button");
+var elMpButton = document.getElementsByClassName('mercadopago-button');
+var numButtons = elMpButton.length;
 
 console.log(elMpButton);
+console.log(numButtons);
 
-elMpButton.addEventListener("click", function() {
-    alert("entrou no click");
-    $('.mercadopago-button').attr("disabled", true);
+for (var i = 0; i < numComments; i++) {
+    elMpButton[i].addEventListener('click', function() {
+    
+        alert("entrou no click");
+        $('.mercadopago-button').attr("disabled", true);
 
-    var orderData = {
-        quantity: document.getElementsByName("unit").value,
-        description: document.getElementsByName("title").value,
-        price: document.getElementsByName("price").value
-    };
-      
+        var orderData = {
+            quantity: document.getElementsByName("unit").value,
+            description: document.getElementsByName("title").value,
+            price: document.getElementsByName("price").value
+        };
+        
         fetch("/create_preference", {
                 method: "POST",
                 headers: {
@@ -34,8 +38,9 @@ elMpButton.addEventListener("click", function() {
                 alert("Unexpected error");
                 $('.mercadopago-button').attr("disabled", false);
             });
-  });
-  
+    });
+}
+
   //Criar preferência ao clicar no botão checkout
   function createCheckoutButton(preference) {
     var script = document.createElement("script");
