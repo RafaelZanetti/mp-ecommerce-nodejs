@@ -25,10 +25,10 @@ document.querySelector(".mercadopago-button").addEventListener("click", function
         })
         .then(function(preference) {
             createCheckoutButton(preference.id);
-            /*$(".shopping-cart").fadeOut(500);
+            $(".shopping-cart").fadeOut(500);
             setTimeout(() => {
                 $(".container_payment").show(500).fadeIn();
-            }, 500);*/
+            }, 500);
         })
         .catch(function() {
             alert("Unexpected error");
@@ -72,10 +72,10 @@ document.querySelector(".mercadopago-button").addEventListener("click", function
   updatePrice();  
   
   //voltar
-  /*document.getElementById("go-back").addEventListener("click", function() {
+  document.getElementById("go-back").addEventListener("click", function() {
     $(".container_payment").fadeOut(500);
     setTimeout(() => {
         $(".shopping-cart").show(500).fadeIn();
     }, 500);
     $('#checkout-btn').attr("disabled", false);  
-  });*/
+  });
