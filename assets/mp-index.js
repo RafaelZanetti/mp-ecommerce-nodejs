@@ -11,13 +11,10 @@ for (var i = 0; i < numButtons; i++) {
         //alert("entrou no click");
         //$('.mercadopago-button').attr("disabled", true);
 
-        var elTitle = document.getElementById('details--title');
-        console.log(elTitle.innerText);
-
         var orderData = {
-            description: document.getElementsByClassName('details--title').innerHTML,
-            quantity: document.getElementsByClassName('details--unit').innerHTML,
-            price: document.getElementsByClassName('details--price').innerHTML
+            description: document.getElementById('details--title').innerHTML,
+            quantity: document.getElementById('details--unit').innerHTML,
+            price: document.getElementById('details--price').innerHTML
         };
 
         console.log('orderDATA-LOG: ', orderData);
