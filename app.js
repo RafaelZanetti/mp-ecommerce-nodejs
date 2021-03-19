@@ -89,17 +89,19 @@ app.get('/feedback', function(request, response) {
 //*-----------------------------------//
 
 
-app.get('/detail', function (req, res) {
-    res.render('detail', req.query);
 
-    console.log(req.query);
-    return req.query;
-});
 
-const consultando = (info) => {
-    console.log('TESTE: ' + info );
+const consultando = () => {
+    app.get('/detail', function (req, res) {
+        res.render('detail', req.query);
+    
+        console.log(req.query);
+        return req.query;
+    });
 }
 consultando();
+
+console.log('CONSULTANDO: ' + consultando.req.query);
 /**----------------------------------------- */
 //MP Integration
 
