@@ -12,7 +12,7 @@ for (var i = 0; i < numButtons; i++) {
         //$('.mercadopago-button').attr("disabled", true);
 
         var elTitle = document.getElementsByClassName('details--title');
-        console.log(elTitle);
+        console.log(elTitle.innerText);
 
         var orderData = {
             description: document.getElementsByClassName('details--title').innerHTML,
