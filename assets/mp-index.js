@@ -73,8 +73,12 @@ for (var i = 0; i < numButtons; i++) {
   
     
   }
-  document.getElementsByClassName('details--unit').addEventListener('change', updatePrice);
-  updatePrice();  
+
+  const elQuantity = document.getElementsByClassName('details--unit');
+  console.log(elQuantity.length);
+
+  //document.getElementsByClassName('details--unit').addEventListener('change', updatePrice);
+  //updatePrice();  
   
   //voltar
   /*document.getElementById("go-back").addEventListener("click", function() {
