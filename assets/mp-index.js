@@ -5,7 +5,7 @@ var numButtons = elMpButton.length;
 console.log(elMpButton);
 console.log(numButtons);
 
-for (var i = 0; i < numComments; i++) {
+for (var i = 0; i < numButtons; i++) {
     elMpButton[i].addEventListener('click', function() {
     
         alert("entrou no click");
