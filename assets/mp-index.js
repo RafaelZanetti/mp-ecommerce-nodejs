@@ -67,20 +67,20 @@ for (var i = 0; i < numButtons; i++) {
     //document.querySelector(".item-name").appendChild(elQuantity);
   
     //document.getElementById("cart-total").innerHTML = "R$ " + amount;
-    document.querySelector(".details--price").innerHTML = "R$ " + unitPrice;
-    document.querySelector(".details--unit").innerHTML = quantity;
+    document.querySelector('.details--price').innerHTML = 'R$ ' + unitPrice;
+    document.querySelector('.details--unit').innerHTML = quantity;
     //document.getElementById("summary-total").innerHTML = "R$ " + amount;
   
     
   }
-  document.getElementsByName("unit").addEventListener("change", updatePrice);
+  document.getElementsByClassName('details--unit').addEventListener('change', updatePrice);
   updatePrice();  
   
   //voltar
-  document.getElementById("go-back").addEventListener("click", function() {
+  /*document.getElementById("go-back").addEventListener("click", function() {
     $(".container_payment").fadeOut(500);
     setTimeout(() => {
         $(".shopping-cart").show(500).fadeIn();
     }, 500);
     $('#checkout-btn').attr("disabled", false);  
-  });
+  });*/
