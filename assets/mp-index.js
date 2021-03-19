@@ -1,6 +1,8 @@
 //Manipula a chamada para o back-end e gera preferência.
 var elMpButton = document.getElementsByClassName("mercadopago-button");
 
+console.log(elMpButton);
+
 elMpButton.addEventListener("click", function() {
     alert("entrou no click");
     $('.mercadopago-button').attr("disabled", true);
