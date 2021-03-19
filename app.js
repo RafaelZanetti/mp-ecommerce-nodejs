@@ -19,9 +19,9 @@ app.get('/', function (req, res) {
 
 app.get('/detail', function (req, res) {
     res.render('detail', req.query);
-});
 
-console.log(req.query);
+    console.log(req.query);
+});
 
 /**----------------------------------------- */
 //MP Integration
