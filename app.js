@@ -60,9 +60,9 @@ app.post("/create_preference", (req, res) => {
             }
         },        
 		back_urls: {
-			success: "http://localhost:8080/pages/success/index.html?feedback",
-			failure: "http://localhost:8080/pages/failure/index.html?feedback",
-			pending: "http://localhost:8080/pages/pending/index.html?feedback"
+			success: "https://rafaelzanetti-username-mp-com.herokuapp.com/success/feedback",
+			failure: "https://rafaelzanetti-username-mp-com.herokuapp.com/failure/feedback",
+			pending: "https://rafaelzanetti-username-mp-com.herokuapp.com/pending/feedback"
 		},
         payment_methods: {
             excluded_payment_methods: [
