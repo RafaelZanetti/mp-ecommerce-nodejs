@@ -47,9 +47,9 @@
         var external_reference = url.search('external_reference'); 
         var preference_id = url.search('preference_id'); */
 
-      console.log(p.collection_id)
+      console.log(p.param('collection_id'));
 
-      /*decodeURI(window.location.search)
+      decodeURI(window.location.search)
       .replace('?', '')
       .split('&')
       .map(param => param.split('='))
@@ -58,7 +58,7 @@
         return values
       }, {})
 
-      console.log(decodeURI);*/
+      console.log('DECOURI: ', decodeURI);
     </script>
   </body>
 </html>
