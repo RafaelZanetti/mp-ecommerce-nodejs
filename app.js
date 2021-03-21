@@ -31,7 +31,7 @@ app.post("/create_preference", (req, res) => {
             id: 1234,
 			title: req.body.description,
             description: "Celular de Tienda e-commerce",
-            picture_url: "https://www.collinsdictionary.com/images/full/book_181404689_1000.jpg",
+            picture_url: req.body.img,
             category_id: "art",
             currency_id: "BRL",
 			unit_price: Number(req.body.price),
