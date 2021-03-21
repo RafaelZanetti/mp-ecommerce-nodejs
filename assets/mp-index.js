@@ -12,9 +12,9 @@ for (var i = 0; i < numButtons; i++) {
         //$('.mercadopago-button').attr("disabled", true);
 
         var orderData = {
-            description: document.getElementById('details--title').innerText,
-            quantity: document.getElementById('details--unit').innerText,
-            price: document.getElementById('details--price').innerText
+            description: document.getElementById('details--title').innerHTML,
+            quantity: document.getElementById('details--unit').innerHTML,
+            price: document.getElementById('details--price').innerHTML
         };
 
         console.log('orderDATA-LOG: ' + orderData);
