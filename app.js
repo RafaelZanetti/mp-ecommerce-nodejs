@@ -5,6 +5,10 @@ var port = process.env.PORT || 3000
 const mercadopago = require("mercadopago");
 
 mercadopago.configurations.setAccessToken("APP_USR-334491433003961-030821-12d7475807d694b645722c1946d5ce5a-725736327");
+mercadopago.configurations.configure({
+    integrator_id: 'dev_24c65fb163bf11ea96500242ac130004',
+});
+
 
 var app = express();
  
@@ -80,10 +84,6 @@ app.post("/create_preference", (req, res) => {
 	};
 
     console.log(preference);
-
-    mercadopago.configure({
-        integrator_id: 'dev_24c65fb163bf11ea96500242ac130004',
-    });
 
 	mercadopago.preferences.create(preference)
 		.then(function (response) {
