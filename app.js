@@ -99,8 +99,6 @@ app.get('/feedback', function(request, response) {
 
 
 /**---------------------------------- */
-
-
 app.get('/detail', (req, res) => {
     res.render('detail', req.query);
 });

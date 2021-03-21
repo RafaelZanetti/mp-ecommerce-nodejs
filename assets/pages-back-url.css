@@ -35,6 +35,25 @@ h3 {
     text-align: center;
 }
 
+.imgPayment_success {
+    width: 150px;
+    height: 150px;
+}
+
+.pageArea--success {
+    text-align: center;
+}
+
+.imgPayment_pending {
+    width: 150px;
+    height: 150px;
+}
+
+.pageArea--pending {
+    text-align: center;
+}
+
+
 /*---------------------------*/
 
   .hidden {
