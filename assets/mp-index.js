@@ -56,6 +56,7 @@ for (var i = 0; i < numButtons; i++) {
     script.dataset.preferenceId = preference;
     document.querySelector('#button-checkout').innerHTML = "";
     document.querySelector('#button-checkout').appendChild(script);
+    document.querySelector('#button-checkout').innerHTML = "Pagar Já";
   }
   
   //Lidar com atualização de preço
