@@ -34,6 +34,7 @@ for (var i = 0; i < numButtons; i++) {
                 createCheckoutButton(preference.id);
 
                 $('#button-checkout-mp').hide();
+                
                 /*$(".shopping-cart").fadeOut(500);
                 setTimeout(() => {
                     $(".container_payment").show(500).fadeIn();
@@ -56,11 +57,28 @@ for (var i = 0; i < numButtons; i++) {
     script.src = "https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js";
     script.type = "text/javascript";
     script.dataset.preferenceId = preference;
-    script.dataset.buttonLabel = "lalalla";
+    script.dataset.buttonLabel = "Pague a compra";
     document.querySelector('#button-checkout').innerHTML = "";
     document.querySelector('#button-checkout').appendChild(script);
   }
   
+  function resumeCheckout () {
+    let quantity = document.getElementById('details--unit').innerHTML;
+    let unitPrice = document.getElementById('details--price').innerHTML
+    //let amount = parseInt(unitPrice) * parseInt(quantity);
+    $("#button-checkout").append( "<p>Test</p>" );
+    //let description = document.getElementById('details--title').innerHTML;
+    
+    //let elQuantity = document.querySelector("#summary-quantity");
+    //document.querySelector(".details--title").innerHTML = description;
+    //document.querySelector(".item-name").appendChild(elQuantity);
+  
+    //document.getElementById("cart-total").innerHTML = "R$ " + amount;
+    document.getElementById('details--price').innerHTML = 'R$ ' + unitPrice;
+    document.getElementById('details--unit').innerHTML = quantity;
+    //document.getElementById("summary-total").innerHTML = "R$ " + amount;
+  }
+
   //Lidar com atualização de preço
   /*function updatePrice() {
     let quantity = document.getElementById('details--unit').innerHTML;
