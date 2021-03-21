@@ -10,7 +10,7 @@ for (var i = 0; i < numButtons; i++) {
     
         //alert("entrou no click");
         //$('.mercadopago-button').attr("disabled", true);
-        $('.mercadopago-button').hide();
+        //$('.mercadopago-button').hide();
 
         var orderData = {
             description: document.getElementById('details--title').innerHTML,
@@ -40,7 +40,7 @@ for (var i = 0; i < numButtons; i++) {
             .catch(function() {
                 alert("Unexpected error");
                 //$('.mercadopago-button').attr("disabled", false);
-                $('.mercadopago-button').show();
+                //$('.mercadopago-button').show();
             });
     });
 }
@@ -54,6 +54,7 @@ for (var i = 0; i < numButtons; i++) {
     script.src = "https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js";
     script.type = "text/javascript";
     script.dataset.preferenceId = preference;
+    script.dataset.buttonLabel = "lalalla";
     document.querySelector('#button-checkout').innerHTML = "";
     document.querySelector('#button-checkout').appendChild(script);
   }
