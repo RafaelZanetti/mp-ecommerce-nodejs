@@ -72,6 +72,8 @@ for (var i = 0; i < numButtons; i++) {
 
     $('.as-filter-button').hide();
     $('.as-accessories-filter-tile').append('<h2>Resumo do Pedido</h2>');
+
+    $('.mini-gallery .as-producttile-image').css({ "width": "150px", "height": "150px"});
     
    
     //let description = document.getElementById('details--title').innerHTML;
