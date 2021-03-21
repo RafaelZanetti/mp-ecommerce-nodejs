@@ -43,7 +43,7 @@ for (var i = 0; i < numButtons; i++) {
     });
 }
 
-/*  //Criar preferência ao clicar no botão checkout
+  //Criar preferência ao clicar no botão checkout
   function createCheckoutButton(preference) {
     var script = document.createElement("script");
     
@@ -58,12 +58,11 @@ for (var i = 0; i < numButtons; i++) {
   
   //Lidar com atualização de preço
   function updatePrice() {
-    let quantity = (document.getElementsByName("unit").value);
-    let unitPrice = document.getElementsByName("price").value;
-    //let amount = parseInt(unitPrice) * parseInt(quantity);
+    let quantity = document.getElementById('details--unit').innerHTML;
+    let unitPrice = document.getElementById('details--price').innerHTML
+    let amount = parseInt(unitPrice) * parseInt(quantity);
 
-  
-    let description = document.getElementsByName("title").value;
+    let description = document.getElementById('details--title').innerHTML;
     
     //let elQuantity = document.querySelector("#summary-quantity");
     document.querySelector(".details--title").innerHTML = description;
