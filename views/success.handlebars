@@ -42,11 +42,12 @@
     <script>
         var href = window.location.href;
         var url = purl(href);
-        var collection_id = url.search('collection_id'); 
+        var p = url.search
+        /*var collection_id = url.search('collection_id'); 
         var external_reference = url.search('external_reference'); 
-        var preference_id = url.search('preference_id'); 
+        var preference_id = url.search('preference_id'); */
 
-      console.log(collection_id)
+      console.log(p)
 
       /*decodeURI(window.location.search)
       .replace('?', '')
