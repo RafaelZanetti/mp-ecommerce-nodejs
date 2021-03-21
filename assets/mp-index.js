@@ -23,6 +23,7 @@ for (var i = 0; i < numButtons; i++) {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    "integrator_id": "dev_24c65fb163bf11ea96500242ac130004",
                 },
                 body: JSON.stringify(orderData),
         })
