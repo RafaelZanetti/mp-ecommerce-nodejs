@@ -106,6 +106,14 @@ app.get('/detail', (req, res) => {
 app.get('/success/feedback', (req, res) => {
     res.render('success', req.query);
 });
+
+app.get('/failure/feedback', (req, res) => {
+    res.render('failure', req.query);
+});
+
+app.get('/pending/feedback', (req, res) => {
+    res.render('pending', req.query);
+});
 /**---------------------------------* */
 
 
