@@ -1,4 +1,3 @@
-//Manipula a chamada para o back-end e gera preferência.
 var elMpButton = document.getElementsByClassName('mercadopago-button');
 var numButtons = elMpButton.length;
 
@@ -7,10 +6,6 @@ console.log('numeroButtonPagamento: ', numButtons);
 for (var i = 0; i < numButtons; i++) {
     elMpButton[i].addEventListener('click', function() {
     
-        //alert("entrou no click");
-        //$('.mercadopago-button').attr("disabled", true);
-        //$('.mercadopago-button').hide();
-
         var orderData = {
             description: document.getElementById('details--title').innerHTML,
             quantity: document.getElementById('details--unit').innerHTML,
@@ -39,8 +34,6 @@ for (var i = 0; i < numButtons; i++) {
             })
             .catch(function() {
                 alert("Unexpected error");
-                //$('.mercadopago-button').attr("disabled", false);
-                //$('.mercadopago-button').show();
             });
     });
 }
