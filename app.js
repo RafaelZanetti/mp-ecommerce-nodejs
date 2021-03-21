@@ -63,7 +63,7 @@ app.post("/create_preference", (req, res) => {
 			"failure": "http://localhost:8080/pages/failure/index.html?feedback",
 			"pending": "http://localhost:8080/pages/pending/index.html?feedback"
 		},
-        notification_url: "https://webhook.site/31d8362e-f603-476d-ae87-30e1648e22b4",
+        notification_url: "https://webhook.site/3210fb56-102a-4680-b598-8d150d7bace2",
         statement_descriptor: "MERCADOPAGO",
         external_reference: "rafa_zanetti_c@hotmail.com",
 		auto_return: 'approved',

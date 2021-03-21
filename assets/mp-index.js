@@ -52,12 +52,12 @@ for (var i = 0; i < numButtons; i++) {
     script.src = "https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js";
     script.type = "text/javascript";
     script.dataset.preferenceId = preference;
-    document.getElementsByClassName("mercadopago-button").innerHTML = "";
-    document.querySelector(".mercadopago-button").appendChild(script);
+    document.getElementById("mercadopago-button").innerHTML = "";
+    document.querySelector("#mercadopago-button").appendChild(script);
   }
   
   //Lidar com atualização de preço
-  function updatePrice() {
+  /*function updatePrice() {
     let quantity = document.getElementById('details--unit').innerHTML;
     let unitPrice = document.getElementById('details--price').innerHTML
     //let amount = parseInt(unitPrice) * parseInt(quantity);
@@ -72,15 +72,9 @@ for (var i = 0; i < numButtons; i++) {
     document.getElementById('details--price').innerHTML = 'R$ ' + unitPrice;
     document.getElementById('details--unit').innerHTML = quantity;
     //document.getElementById("summary-total").innerHTML = "R$ " + amount;
-  
-    
   }
-
-  //const elQuantity = document.getElementById('details--unit');
-  //console.log(elQuantity.length);
-
-  //document.getElementById('details--unit').addEventListener('change', updatePrice);
-  //updatePrice();  
+  document.getElementById('details--unit').addEventListener('change', updatePrice);
+  updatePrice();*/
   
   //voltar
   /*document.getElementById("go-back").addEventListener("click", function() {
