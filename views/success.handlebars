@@ -57,8 +57,9 @@
         values[ key ] = value
         return values
       }, {})
+      decodeURI();
 
-      console.log('DECOURI: ', decodeURI(values));
+      console.log('DECOURI: ', decodeURI.values);
     </script>
   </body>
 </html>
