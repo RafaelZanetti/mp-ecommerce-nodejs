@@ -27,7 +27,7 @@
             <h1>Falha ao Realizar Pagamento</h1>
             <h3>verifique se digitou todos os dados corretamente e tente novamente</h3>
             <img class="imgPayment_failure" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDhQn0GkjoKJr-Oyw5lqAJJuK0CNb-YW9Omw&usqp=CAU" alt="payment_failure">
-            
+            <div id="result--payment-failure"></div>
         </div>
     </main>
     <!-- footer -->
@@ -38,6 +38,23 @@
             </div>
         </div>
     </div>
+    <script>
 
+      var params = window.location.search.substring(1).split('&');
+
+
+      var paramArray = {};
+
+      for(var i=0; i<params.length; i++) {
+        
+          var param = params[i].split('=');
+
+          paramArray[param[0]] = param[1];
+      }
+
+      $("#result--payment-failure").append( "<h3>" + "collection_id: " + paramArray['collection_id'] +"</h3>" );
+      $("#result--payment-failure").append( "<h3>" + "external_reference: " + paramArray['external_reference'] +"</h3>" );
+      $("#result--payment-failure").append( "<h3>" + "preference_id: " + paramArray['preference_id'] +"</h3>" );
+    </script>
   </body>
 </html>
