@@ -66,7 +66,7 @@ app.post("/create_preference", (req, res) => {
         payment_methods: {
             excluded_payment_methods: [
                 {
-                    id: "amex"
+                    id: "master"
                 }
             ],
             excluded_payment_types: [
