@@ -40,13 +40,24 @@
     </div>
 
     <script>
-        var url = window.location.href;
+        /*var url = window.location.href;
         var url_ = purl(url);
         var collection_id = url_.param('collection_id'); 
         var external_reference = url_.param('external_reference'); 
         var preference_id = url_.param('preference_id'); 
 
-      console.log(collection_id)
+      console.log(collection_id)*/
+
+      decodeURI(window.location.search)
+      .replace('?', '')
+      .split('&')
+      .map(param => param.split('='))
+      .reduce((values, [ key, value ]) => {
+        values[ key ] = value
+        return values
+      }, {})
+
+      console.log(decodeURI);
     </script>
   </body>
 </html>
