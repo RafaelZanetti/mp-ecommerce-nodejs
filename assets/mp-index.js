@@ -70,8 +70,8 @@ for (var i = 0; i < numButtons; i++) {
     
     $("#button-checkout").append( "<h3>" + "R$ " + amount +"</h3>" );
 
-    $('. as-filter-button-text').hide();
-    $(".as-accessories-filter-tile").append("<h2>Resumo do Pedido</h2>");
+    $('.as-filter-button').hide();
+    $('.as-accessories-filter-tile').append('<h2>Resumo do Pedido</h2>');
     
    
     //let description = document.getElementById('details--title').innerHTML;
