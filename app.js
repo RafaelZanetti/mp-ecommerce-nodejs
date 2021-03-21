@@ -99,14 +99,14 @@ app.get('/feedback', function(request, response) {
 
 
 /**---------------------------------- */
-const details_order = [];
+
 
 app.get('/detail', (req, res) => {
     res.render('detail', req.query);
+});
 
-    details_order.push(req.query);
-     
-    //console.log(details_order);
+app.get('/success', (req, res) => {
+    res.render('success', req.query);
 });
 /**---------------------------------* */
 
