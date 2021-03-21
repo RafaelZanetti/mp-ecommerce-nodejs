@@ -67,16 +67,22 @@ for (var i = 0; i < numButtons; i++) {
     let quantity = document.getElementById('details--unit').innerHTML;
     let unitPrice = document.getElementById('details--price').innerHTML
     let amount = parseInt(unitPrice) * parseInt(quantity);
-    
+
+    let description = document.getElementById('details--title').innerHTML;
+
     $("#button-checkout").append( "<h3>" + "R$ " + amount +"</h3>" );
 
     $('.as-filter-button').hide();
+    $('.as-producttile-tilelink').hide();
+    $('#details--price').hide();
+    $('#details--unit').hide();    
+
     $('.as-accessories-filter-tile').append('<h2>Resumo do Pedido</h2>');
 
-    $('.mini-gallery .as-producttile-image').css({ "width": "150px", "height": "150px"});
+    $('.mini-gallery .as-producttile-image').css({ "width": "150px", "height": "auto", "margin-top": "20px"});
     
-   
-    //let description = document.getElementById('details--title').innerHTML;
+    document.getElementById('details--resume-title').innerHTML = `${description} x ${quantity}  -  R$ ${amount}`;
+    
     
     //let elQuantity = document.querySelector("#summary-quantity");
     //document.querySelector(".details--title").innerHTML = description;
