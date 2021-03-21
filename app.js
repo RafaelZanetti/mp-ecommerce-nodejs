@@ -103,7 +103,7 @@ app.get('/detail', (req, res) => {
     res.render('detail', req.query);
 });
 
-app.get('/success', (req, res) => {
+app.get('/success/feedback', (req, res) => {
     res.render('success', req.query);
 });
 /**---------------------------------* */
