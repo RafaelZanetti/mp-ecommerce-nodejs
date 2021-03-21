@@ -27,7 +27,7 @@
         <div class="pageArea--success">
             <h1>Compra Realizada com Sucesso</h1>
             <img class="imgPayment_success" src="https://mentoring4you.com.br/assets/img/icons-svg/ok.svg" alt="payment_success">
-            
+            <div id="result--payment"></div>
         </div>
     </main>
     <!-- footer -->
@@ -40,44 +40,22 @@
     </div>
 
     <script>
-      /*  var href = window.location.href;
-        var url = purl(href);
-        var p = url.search*/
-        /*var collection_id = url.search('collection_id'); 
-        var external_reference = url.search('external_reference'); 
-        var preference_id = url.search('preference_id'); */
 
-     /* console.log(p.param('collection_id'));
+      var params = window.location.search.substring(1).split('&');
 
-      decodeURI(window.location.search)
-      .replace('?', '')
-      .split('&')
-      .map(param => param.split('='))
-      .reduce((values, [ key, value ]) => {
-        values[ key ] = value
-        return values
-      }, {})
-      decodeURI();
 
-      console.log('DECOURI: ', decodeURI.values);*/
+      var paramArray = {};
 
-      //Array de parametros 'chave=valor'
-var params = window.location.search.substring(1).split('&');
+      for(var i=0; i<params.length; i++) {
+        
+          var param = params[i].split('=');
 
-//Criar objeto que vai conter os parametros
-var paramArray = {};
+          paramArray[param[0]] = param[1];
+      }
 
-//Passar por todos os parametros
-for(var i=0; i<params.length; i++) {
-    //Dividir os parametros chave e valor
-    var param = params[i].split('=');
-
-    //Adicionar ao objeto criado antes
-    paramArray[param[0]] = param[1];
-}
-
-console.log(paramArray['collection_id']);
-
+      $("#result--payment").append( "<h3>" + "collection_id: " + paramArray['collection_id'] +"</h3>" );
+      $("#result--payment").append( "<h3>" + "external_reference: " + paramArray['external_reference'] +"</h3>" );
+      $("#result--payment").append( "<h3>" + "preference_id: " + paramArray['preference_id'] +"</h3>" );
     </script>
   </body>
 </html>
