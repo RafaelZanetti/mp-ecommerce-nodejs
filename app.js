@@ -59,10 +59,18 @@ app.post("/create_preference", (req, res) => {
             }
         },        
 		back_urls: {
-			"success": "http://localhost:8080/pages/success/index.html?feedback",
-			"failure": "http://localhost:8080/pages/failure/index.html?feedback",
-			"pending": "http://localhost:8080/pages/pending/index.html?feedback"
+			success: "http://localhost:8080/pages/success/index.html?feedback",
+			failure: "http://localhost:8080/pages/failure/index.html?feedback",
+			pending: "http://localhost:8080/pages/pending/index.html?feedback"
 		},
+        payment_methods: {
+            excluded_payment_methods: [
+                {
+                    id: "amex"
+                }
+            ],
+            installments: 6
+        },
         notification_url: "https://webhook.site/3210fb56-102a-4680-b598-8d150d7bace2",
         statement_descriptor: "MERCADOPAGO",
         external_reference: "rafa_zanetti_c@hotmail.com",
