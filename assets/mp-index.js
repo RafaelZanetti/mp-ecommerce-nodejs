@@ -32,6 +32,8 @@ for (var i = 0; i < numButtons; i++) {
             })
             .then(function(preference) {
                 createCheckoutButton(preference.id);
+
+                $('#button-checkout.mercadopago-button').hide();
                 /*$(".shopping-cart").fadeOut(500);
                 setTimeout(() => {
                     $(".container_payment").show(500).fadeIn();
