@@ -25,7 +25,7 @@ app.get('/', function (req, res) {
 //MP Integration
 app.post("/create_preference", (req, res) => {
 
-    console.log('log_PREFERENCE', req.body);
+    console.log('log_PREFERENCE: ', req.body);
 
 	let preference = {
         collector_id: 725736327,

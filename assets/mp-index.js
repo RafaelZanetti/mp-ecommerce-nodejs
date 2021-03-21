@@ -19,7 +19,7 @@ for (var i = 0; i < numButtons; i++) {
 
         console.log('orderDATA-LOG: ', orderData);
         
-        /*fetch("/create_preference", {
+        fetch("/create_preference", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -39,7 +39,7 @@ for (var i = 0; i < numButtons; i++) {
             .catch(function() {
                 alert("Unexpected error");
                 $('.mercadopago-button').attr("disabled", false);
-            });*/
+            });
     });
 }
 
