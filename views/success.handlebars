@@ -40,14 +40,14 @@
     </div>
 
     <script>
-        var href = window.location.href;
+      /*  var href = window.location.href;
         var url = purl(href);
-        var p = url.search
+        var p = url.search*/
         /*var collection_id = url.search('collection_id'); 
         var external_reference = url.search('external_reference'); 
         var preference_id = url.search('preference_id'); */
 
-      console.log(p.param('collection_id'));
+     /* console.log(p.param('collection_id'));
 
       decodeURI(window.location.search)
       .replace('?', '')
@@ -59,7 +59,22 @@
       }, {})
       decodeURI();
 
-      console.log('DECOURI: ', decodeURI.values);
+      console.log('DECOURI: ', decodeURI.values);*/
+
+    fetch("/feedback", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+        })
+            .then(function(response) {
+                console.log(response.json);
+                return response.json();
+            })
+            .catch(function() {
+                alert("Unexpected error Notifications");
+            });
+
     </script>
   </body>
 </html>
