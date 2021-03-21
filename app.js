@@ -64,12 +64,20 @@ app.post("/create_preference", (req, res) => {
 			pending: "http://localhost:8080/pages/pending/index.html?feedback"
 		},
         payment_methods: {
+            default_card_id: null,
+            default_payment_method_id: null,
             excluded_payment_methods: [
                 {
                     id: "amex"
                 }
             ],
-            installments: 6
+            excluded_payment_types: [
+                {
+                    id: ""
+                }
+            ],
+            installments: 6,
+            default_installments: null
         },
         notification_url: "https://webhook.site/3210fb56-102a-4680-b598-8d150d7bace2",
         statement_descriptor: "MERCADOPAGO",
