@@ -40,11 +40,11 @@
     </div>
 
     <script>
-        var url = window.location.href;
-        var url_ = purl(url);
-        var collection_id = url_.param('collection_id'); 
-        var external_reference = url_.param('external_reference'); 
-        var preference_id = url_.param('preference_id'); 
+        var href = window.location.href;
+        var url = purl(href);
+        var collection_id = url.param('collection_id'); 
+        var external_reference = url.param('external_reference'); 
+        var preference_id = url.param('preference_id'); 
 
       console.log(collection_id)
 
