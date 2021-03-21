@@ -52,8 +52,8 @@ for (var i = 0; i < numButtons; i++) {
     script.src = "https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js";
     script.type = "text/javascript";
     script.dataset.preferenceId = preference;
-    document.getElementsByClassName("mercadopago-button").innerHTML = "";
-    document.querySelector(".mercadopago-button").appendChild(script);
+    document.querySelector('.mercadopago-button').innerHTML = "";
+    document.querySelector('.mercadopago-button').appendChild(script);
   }
   
   //Lidar com atualização de preço
