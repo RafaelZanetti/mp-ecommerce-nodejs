@@ -9,7 +9,7 @@ for (var i = 0; i < numButtons; i++) {
     elMpButton[i].addEventListener('click', function() {
     
         //alert("entrou no click");
-        //$('.mercadopago-button').attr("disabled", true);
+        $('.mercadopago-button').attr("disabled", true);
 
         var orderData = {
             description: document.getElementById('details--title').innerHTML,
@@ -31,10 +31,10 @@ for (var i = 0; i < numButtons; i++) {
             })
             .then(function(preference) {
                 createCheckoutButton(preference.id);
-                $(".shopping-cart").fadeOut(500);
+                /*$(".shopping-cart").fadeOut(500);
                 setTimeout(() => {
                     $(".container_payment").show(500).fadeIn();
-                }, 500);
+                }, 500);*/
             })
             .catch(function() {
                 alert("Unexpected error");
@@ -52,8 +52,8 @@ for (var i = 0; i < numButtons; i++) {
     script.src = "https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js";
     script.type = "text/javascript";
     script.dataset.preferenceId = preference;
-    document.getElementById("mercadopago-button").innerHTML = "";
-    document.querySelector("#mercadopago-button").appendChild(script);
+    document.getElementsByClassName("mercadopago-button").innerHTML = "";
+    document.querySelector(".mercadopago-button").appendChild(script);
   }
   
   //Lidar com atualização de preço
