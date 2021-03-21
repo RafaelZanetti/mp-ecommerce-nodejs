@@ -2,7 +2,6 @@
 var elMpButton = document.getElementsByClassName('mercadopago-button');
 var numButtons = elMpButton.length;
 
-//console.log(elMpButton);
 console.log('numeroButtonPagamento: ', numButtons);
 
 for (var i = 0; i < numButtons; i++) {
@@ -35,11 +34,6 @@ for (var i = 0; i < numButtons; i++) {
 
                 $('#button-checkout-mp').hide();
                 resumeCheckout();
-
-                /*$(".shopping-cart").fadeOut(500);
-                setTimeout(() => {
-                    $(".container_payment").show(500).fadeIn();
-                }, 500);*/
             })
             .catch(function() {
                 alert("Unexpected error");
@@ -49,12 +43,10 @@ for (var i = 0; i < numButtons; i++) {
     });
 }
 
-  //Criar preferência ao clicar no botão checkout
+  //preference create
   function createCheckoutButton(preference) {
     var script = document.createElement("script");
     
-     //O domínio de origem deve ser preenchido de acordo com o site ao qual você está se integrando.
-     // Por exemplo: para a Argentina ".com.ar" ou para o Brasil ".com.br".
     script.src = "https://www.mercadopago.com.br/integrations/v1/web-payment-checkout.js";
     script.type = "text/javascript";
     script.dataset.preferenceId = preference;
@@ -70,8 +62,6 @@ for (var i = 0; i < numButtons; i++) {
 
     let description = document.getElementById('details--title').innerHTML;
 
-    $("#button-checkout").append( "<h3>" + "R$ " + amount +"</h3>" );
-
     $('.as-filter-button').hide();
     $('.as-producttile-tilelink').hide();
     $('#details--price').hide();
@@ -83,42 +73,5 @@ for (var i = 0; i < numButtons; i++) {
     
     document.getElementById('details--resume-title').innerHTML = `${description} x ${quantity}  -  R$ ${amount}`;
     
-    
-    //let elQuantity = document.querySelector("#summary-quantity");
-    //document.querySelector(".details--title").innerHTML = description;
-    //document.querySelector(".item-name").appendChild(elQuantity);
-  
-    //document.getElementById("cart-total").innerHTML = "R$ " + amount;
-    //document.getElementById('details--price').innerHTML = 'R$ ' + unitPrice;
-    //document.getElementById('details--unit').innerHTML = quantity;
-    //document.getElementById("summary-total").innerHTML = "R$ " + amount;
+    $("#button-checkout").append( "<h3>" + "Total  R$: " + amount +"</h3>" );
   }
-
-  //Lidar com atualização de preço
-  /*function updatePrice() {
-    let quantity = document.getElementById('details--unit').innerHTML;
-    let unitPrice = document.getElementById('details--price').innerHTML
-    //let amount = parseInt(unitPrice) * parseInt(quantity);
-
-    //let description = document.getElementById('details--title').innerHTML;
-    
-    //let elQuantity = document.querySelector("#summary-quantity");
-    //document.querySelector(".details--title").innerHTML = description;
-    //document.querySelector(".item-name").appendChild(elQuantity);
-  
-    //document.getElementById("cart-total").innerHTML = "R$ " + amount;
-    document.getElementById('details--price').innerHTML = 'R$ ' + unitPrice;
-    document.getElementById('details--unit').innerHTML = quantity;
-    //document.getElementById("summary-total").innerHTML = "R$ " + amount;
-  }
-  document.getElementById('details--unit').addEventListener('change', updatePrice);
-  updatePrice();*/
-  
-  //voltar
-  /*document.getElementById("go-back").addEventListener("click", function() {
-    $(".container_payment").fadeOut(500);
-    setTimeout(() => {
-        $(".shopping-cart").show(500).fadeIn();
-    }, 500);
-    $('#checkout-btn').attr("disabled", false);
-  });*/
