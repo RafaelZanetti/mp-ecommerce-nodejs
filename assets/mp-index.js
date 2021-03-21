@@ -35,6 +35,7 @@ for (var i = 0; i < numButtons; i++) {
 
                 $('#button-checkout-mp').hide();
                 resumeCheckout();
+
                 /*$(".shopping-cart").fadeOut(500);
                 setTimeout(() => {
                     $(".container_payment").show(500).fadeIn();
@@ -63,10 +64,16 @@ for (var i = 0; i < numButtons; i++) {
   }
   
   function resumeCheckout() {
-    //let quantity = document.getElementById('details--unit').innerHTML;
-    //let unitPrice = document.getElementById('details--price').innerHTML
-    //let amount = parseInt(unitPrice) * parseInt(quantity);
-    $("#button-checkout").append( "<p>Test</p>" );
+    let quantity = document.getElementById('details--unit').innerHTML;
+    let unitPrice = document.getElementById('details--price').innerHTML
+    let amount = parseInt(unitPrice) * parseInt(quantity);
+    
+    $("#button-checkout").append( "<h3>" + "R$ " + amount +"</h3>" );
+
+    $('. as-filter-button-text').hide();
+    $(".as-accessories-filter-tile").append("<h2>Resumo do Pedido</h2>");
+    
+   
     //let description = document.getElementById('details--title').innerHTML;
     
     //let elQuantity = document.querySelector("#summary-quantity");
