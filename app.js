@@ -95,7 +95,7 @@ app.get('/detail', (req, res) => {
 
     details_order.push(req.query);
      
-    console.log(details_order);
+    //console.log(details_order);
 });
 
 
