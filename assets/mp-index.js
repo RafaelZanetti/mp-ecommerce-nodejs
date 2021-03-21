@@ -79,8 +79,8 @@ for (var i = 0; i < numButtons; i++) {
   //const elQuantity = document.getElementById('details--unit');
   //console.log(elQuantity.length);
 
-  document.getElementById('details--unit').addEventListener('change', updatePrice);
-  updatePrice();  
+  //document.getElementById('details--unit').addEventListener('change', updatePrice);
+  //updatePrice();  
   
   //voltar
   /*document.getElementById("go-back").addEventListener("click", function() {
