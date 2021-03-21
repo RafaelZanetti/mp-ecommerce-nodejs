@@ -42,9 +42,9 @@
     <script>
         var href = window.location.href;
         var url = purl(href);
-        var collection_id = url.param('collection_id'); 
-        var external_reference = url.param('external_reference'); 
-        var preference_id = url.param('preference_id'); 
+        var collection_id = url.search('collection_id'); 
+        var external_reference = url.search('external_reference'); 
+        var preference_id = url.search('preference_id'); 
 
       console.log(collection_id)
 
