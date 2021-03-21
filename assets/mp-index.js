@@ -10,6 +10,7 @@ for (var i = 0; i < numButtons; i++) {
     
         //alert("entrou no click");
         //$('.mercadopago-button').attr("disabled", true);
+        $('.mercadopago-button').hide();
 
         var orderData = {
             description: document.getElementById('details--title').innerHTML,
@@ -39,6 +40,7 @@ for (var i = 0; i < numButtons; i++) {
             .catch(function() {
                 alert("Unexpected error");
                 //$('.mercadopago-button').attr("disabled", false);
+                $('.mercadopago-button').show();
             });
     });
 }
