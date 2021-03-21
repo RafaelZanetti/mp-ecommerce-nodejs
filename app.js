@@ -70,6 +70,7 @@ app.post("/create_preference", (req, res) => {
             installments: 6
         },
         id: "",
+        integrator_id: "dev_24c65fb163bf11ea96500242ac130004",
         notification_url: "https://webhook.site/3210fb56-102a-4680-b598-8d150d7bace2",
         statement_descriptor: "MERCADOPAGO",
         external_reference: "rafa_zanetti_c@hotmail.com",
