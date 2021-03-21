@@ -60,33 +60,33 @@ for (var i = 0; i < numButtons; i++) {
   function updatePrice() {
     let quantity = document.getElementById('details--unit').innerHTML;
     let unitPrice = document.getElementById('details--price').innerHTML
-    let amount = parseInt(unitPrice) * parseInt(quantity);
+    //let amount = parseInt(unitPrice) * parseInt(quantity);
 
-    let description = document.getElementById('details--title').innerHTML;
+    //let description = document.getElementById('details--title').innerHTML;
     
     //let elQuantity = document.querySelector("#summary-quantity");
-    document.querySelector(".details--title").innerHTML = description;
+    //document.querySelector(".details--title").innerHTML = description;
     //document.querySelector(".item-name").appendChild(elQuantity);
   
     //document.getElementById("cart-total").innerHTML = "R$ " + amount;
-    document.querySelector('.details--price').innerHTML = 'R$ ' + unitPrice;
-    document.querySelector('.details--unit').innerHTML = quantity;
+    document.getElementById('details--price').innerHTML = 'R$ ' + unitPrice;
+    document.getElementById('details--unit').innerHTML = quantity;
     //document.getElementById("summary-total").innerHTML = "R$ " + amount;
   
     
   }
 
-  const elQuantity = document.getElementsByClassName('details--unit');
-  console.log(elQuantity.length);
+  //const elQuantity = document.getElementById('details--unit');
+  //console.log(elQuantity.length);
 
-  //document.getElementsByClassName('details--unit').addEventListener('change', updatePrice);
-  //updatePrice();  
+  document.getElementById('details--unit').addEventListener('change', updatePrice);
+  updatePrice();  
   
   //voltar
-  document.getElementById("go-back").addEventListener("click", function() {
+  /*document.getElementById("go-back").addEventListener("click", function() {
     $(".container_payment").fadeOut(500);
     setTimeout(() => {
         $(".shopping-cart").show(500).fadeIn();
     }, 500);
-    $('#checkout-btn').attr("disabled", false);  
+    $('#checkout-btn').attr("disabled", false);
   });*/
