@@ -39,11 +39,13 @@
     </div>
 
     <script>
-      var url = require('url');
-      var url_parts = url.parse(request.url, true);
-      var query = url_parts.query;
+        var url = window.location.href;
+        var url_ = purl(url);
+        var collection_id = url_.param('collection_id'); 
+        var external_reference = url_.param('external_reference'); 
+        var preference_id = url_.param('preference_id'); 
 
-      console.log()
+      console.log(collection_id)
     </script>
   </body>
 </html>
