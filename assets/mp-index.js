@@ -17,7 +17,7 @@ for (var i = 0; i < numButtons; i++) {
             price: document.getElementById('details--price').innerHTML
         };
 
-        console.log('orderDATA-LOG: ' + orderData);
+        console.log('orderDATA-LOG: ', orderData);
         
         /*fetch("/create_preference", {
                 method: "POST",
