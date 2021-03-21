@@ -14,7 +14,8 @@ for (var i = 0; i < numButtons; i++) {
         var orderData = {
             description: document.getElementById('details--title').innerHTML,
             quantity: document.getElementById('details--unit').innerHTML,
-            price: document.getElementById('details--price').innerHTML
+            price: document.getElementById('details--price').innerHTML,
+            img: document.getElementById('details--img').src
         };
 
         console.log('orderDATA-LOG: ', orderData);
