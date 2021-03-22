@@ -7,7 +7,7 @@ body {
     color: RGBA(0,0,0,0.8);
   }
 
-h1 {
+.notification-title {
     font-size: 2.5rem;
     display: flex!important;
     justify-content: center!important;
