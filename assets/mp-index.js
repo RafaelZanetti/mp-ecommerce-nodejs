@@ -74,3 +74,4 @@ for (var i = 0; i < numButtons; i++) {
     }
 
     const teste = 'lalalala'
+    console.log(teste);
