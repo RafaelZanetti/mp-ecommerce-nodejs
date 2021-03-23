@@ -16,8 +16,6 @@ for (var i = 0; i < numButtons; i++) {
         
         const device_id = MP_DEVICE_SESSION_ID;
 
-        console.log('ID armor',device_id);
-
         fetch("/create_preference", {
                 method: "POST",
                 headers: {
