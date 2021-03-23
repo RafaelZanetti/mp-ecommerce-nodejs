@@ -72,6 +72,3 @@ for (var i = 0; i < numButtons; i++) {
 
         $("#button-checkout").append( "<h3>" + "Total  R$: " + amount +"</h3>" );
     }
-
-    const teste = 'lalalala'
-    console.log(teste);
